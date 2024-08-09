@@ -1,10 +1,11 @@
 package HashMap;
 
-// To find first non-repeated character in the string
+// TO get first repeated character in string
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
-public class Ques1 {
+public class Ques2 {
     public static void main(String[] args) {
         Map<Character, Integer> freqMap = new HashMap<>();
         String str = "a green apple";
@@ -18,7 +19,7 @@ public class Ques1 {
         }
 
         for (char ch : str.toCharArray()) {
-            if (freqMap.get(ch) == 1) {
+            if (freqMap.get(ch) != 1) {
                 System.out.println(ch);
                 break;
             }
