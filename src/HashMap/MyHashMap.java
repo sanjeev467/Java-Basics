@@ -69,6 +69,23 @@ public class MyHashMap {
         throw new IllegalArgumentException();
     }
 
+    // remove value
+
+    public String remove(int key){
+        int index = hashKey(key);
+        if(list[index] == null) throw new IllegalArgumentException();
+        var bucket = list[index];
+
+        for(var entry : bucket){
+            if(entry.key == key){
+                bucket.remove(entry);
+                return entry.value;
+            }
+        }
+
+        throw new IllegalArgumentException();
+    }
+
     public String toString(){
         return Arrays.toString(list);
     }

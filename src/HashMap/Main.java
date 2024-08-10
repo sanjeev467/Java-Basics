@@ -9,6 +9,11 @@ public class Main {
 //        System.out.println(map);
 
 //        to get the value through key
-        System.out.println(map.get(1));
+//        System.out.println(map.get(1));
+
+//        to remove the entry
+        System.out.println(map.remove(1));
+        System.out.println(map);
     }
+
 }
